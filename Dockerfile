@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-LABEL maintainer="Yan siyu<siyuyan@gmail.com>"
+LABEL maintainer="Yan siyu<siyu.yan@visenze.com>"
 
 ENV LC_ALL=C
 ENV DEBIAN_FRONTEND=noninteractive
