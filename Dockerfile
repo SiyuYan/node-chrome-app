@@ -24,7 +24,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu xenial main universe\n" > /etc/ap
 RUN apt-get -qqy update
 
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get -qqy --no-install-recommends install \
   nodejs \
   firefox \
