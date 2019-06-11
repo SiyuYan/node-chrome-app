@@ -23,6 +23,15 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu xenial main universe\n" > /etc/ap
   && echo "deb http://security.ubuntu.com/ubuntu xenial-security main universe\n" >> /etc/apt/sources.list
 RUN apt-get -qqy update
 
+ENV BUILD_PACKAGES ca-certificates openssl gzip tar
+
+ADD https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.6.0/allure-2.6.0.tgz .
+RUN mkdir -p allure allure-results allure-report allure-config allure-history && \
+    update-ca-certificates && \ 
+    tar -xzf allure-2.6.0.tgz -C ./ 
+
+ENV PATH="/allure-2.6.0/bin:$PATH" ALLURE_CONFIG="/allure-config/allure.properties"
+
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get -qqy --no-install-recommends install \
