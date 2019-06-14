@@ -9,7 +9,8 @@
     "coverage": "rimraf coverage && ng test --coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "webdriverio": "wdio wdio.conf.js && allure generate _results_/allure-raw/ -o _results_/report --clean"
+    "webdriverio": "wdio wdio.conf.js",
+    "webdriverio-report": "allure generate _results_/allure-raw/ -o _results_/report --clean"
   },
   "private": true,
   "devDependencies": {

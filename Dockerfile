@@ -54,7 +54,7 @@ WORKDIR /home/node
 ADD package.json .
 RUN chown node:node -R .
 RUN chmod 777 -R .
-
+RUN mkdir -p /home/node/_results_/allure-raw
 RUN google-chrome --version
 RUN firefox --version
 RUN node --version
